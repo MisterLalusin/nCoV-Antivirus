@@ -1,0 +1,25 @@
+E:
+mkdir E:\Programs\MongoDB\Server\4.2\data\db
+cd E:\Programs\MongoDB\Server\4.2\bin
+mongod --directoryperdb --dbpath  E:\Programs\MongoDB\Server\4.2\data\db --logpath E:\Programs\MongoDB\Server\4.2\log\mongo.log --logappend --install
+net start MongoDB
+mongo
+show dbs
+use coronaDB 
+db.createUser ({
+	user:"corona",
+	pwd:"12345678",
+	roles: [ "readWrite", "dbAdmin" ]
+});
+db.createCollection('users');
+db.users.insert({first_name:"John Rovic", last_name:"Lalusin", user_name:"admin@corona.com", password: "12345678",user_level:"admin"});
+db.users.insert({first_name:"Nicole", last_name:"Zamora", user_name:"zamora@corona.com", password: "12345678",user_level:"user"});
+db.users.insert({first_name:"Angelo Gil", last_name:"Amoranto", user_name:"amoranto@corona.com", password: "12345678",user_level:"user"});
+db.createCollection('users');
+db.createCollection('data');
+db.data.insert({type:"box1", count:"3"});
+db.data.insert({type:"box2", count:"130"});
+db.data.insert({type:"box3", count:"473"});
+db.data.insert({type:"box4", count:"0"});
+db.createCollection('chat');
+db.chat.insert({sender:"John Rovic Lalusin", message: "How may I help you?"});

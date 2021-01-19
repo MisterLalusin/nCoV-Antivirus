@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>nCoV Antivirus</label>
+	</settings>
+	<users>
+		<user>
+			<path>nCoV Antivirus.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>nCoV Antivirus.jcp</path>
+		</project>
+	</projects>
+</workspace>
